@@ -1,0 +1,1 @@
+INSERT INTO product(name, description, category_id) values('Test product', 'Testing', 'Test Category');

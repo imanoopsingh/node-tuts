@@ -4,10 +4,10 @@ on:
     paths:
       - '**/migrations/**'
 jobs:
-   build:
-     runs-on: ubuntu-latest  # windows-latest | macos-latest
-     name: Test changed-files
-     steps:
+  build:
+    runs-on: ubuntu-latest  # windows-latest | macos-latest
+    name: Test changed-files
+    steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
@@ -23,3 +23,15 @@ jobs:
               echo "Invalid PR please split it up" && exit 1
             fi
           done
+
+  runTest:
+    runs-on: ubuntu-latest
+    name: echo steps
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 
+      - name: echo command
+        run: |
+          echo "This is test echo"
+
