@@ -23,15 +23,4 @@ jobs:
               echo "Invalid PR please split it up" && exit 1
             fi
           done
-
-  runTest:
-    runs-on: ubuntu-latest
-    name: echo steps
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 
-      - name: echo command
-        run: |
-          echo "This is test echo"
-
+          
