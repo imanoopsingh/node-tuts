@@ -23,6 +23,7 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_modified_files }}; do
             if [[ $file == **"migrations"** ]]; then
               hasmigrations=true
+              break
             fi
           done
           
