@@ -1,0 +1,1 @@
+INSERT INTO bundle(id, apr, status) values(1, 10.43, 'Submitted');
